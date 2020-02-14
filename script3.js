@@ -1,14 +1,12 @@
-function createStudent(name, section){
+//OBJECT CREATION USING OBJECT LITERAL
 
-    let stud= {};
-    stud.name = name;
-    stud.section = section;
-    return stud;
-
+function Student(name, section){
+    this.name = name;
+    this.section = section;
+    this.speak = function(language){
+        document.write(`${this.name} can speak ${language}`);
+    }
 }
 
-let juan = createStudent("juan dela cruz", "2ITE");
-let pedro = createStudent("pedro fernandez", "2ITE");
-
-document.write(`${juan.name} is enrolled in section ${juan.section}<br>`)
-document.write(`${pedro.name} is enrolled in section ${juan.section}<br>`)
+let stud1 = new Student("juan dela cruz", "bobo");
+stud1.speak("tagalog");
