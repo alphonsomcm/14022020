@@ -1,12 +1,14 @@
 //OBJECT CREATION USING OBJECT LITERAL
 
-let animal = {kind: "mammal", type: "Dog", breed: "Doberman"};
-let func = function(){
-    return `${this.kind}, ${this.type}, ${this.breed}`
-
+class Bird{
+    constructor(name, wingspan){
+        this.name = name;
+        this.wingspan = wingspan;
+    }
+   static fly(distance){
+        console.log(`${this.name} can fly ${distance} miles...`);
+    }
 }
 
-let newFunc = func.bind(animal);
-
-document.write(newFunc());
-console.log(newFunc());
+//let bird1 = name Bird("Eagle", 1.5);
+Bird.fly(1000);
